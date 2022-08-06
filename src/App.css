@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+  margin: 0;
+  padding:0;
+  box-sizing:border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.app {
+  display:flex;
   flex-direction: column;
-  align-items: center;
+  width: 100vw;
+  height: 100vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  gap:20px;
 }
-
-.App-link {
-  color: #61dafb;
+.icons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 45vw;
 }
-
-@keyframes App-logo-spin {
-  from {
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.typing{
+  font-weight: 10;
+  
+  font-size: 40px;
+  animation-name: blink;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+}
+.wave:hover {
+  animation-name: wave;
+  animation-duration: 500ms;
+  animation-iteration-count: 4;
+  
+}
+.button {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  top: 2vh;
+  right: 5vw;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid grey;
+  padding: 10px;
+  border-radius: 200px;
+  cursor: pointer;
+}
+@keyframes wave {
+  0%{
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  50%{
+    transform: rotate(50deg);
   }
+  100%{
+    transform: rotate(0deg);
+  }
+  
+}
+@keyframes blink {
+  0% {
+   opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+   opacity: 1;
+  }
+  
 }
